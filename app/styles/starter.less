@@ -1,0 +1,110 @@
+// Rounded corners (All)
+.border-radius (@radius: 5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+
+// Rounded corners (Individual)
+.border-radius-custom (@topleft: 5px, @topright: 5px, @bottomleft: 5px, @bottomright: 5px) {
+  -webkit-border-radius: @topleft @topright @bottomright @bottomleft;
+  -moz-border-radius: @topleft @topright @bottomright @bottomleft;
+  border-radius: @topleft @topright @bottomright @bottomleft;
+}
+
+// Box shadow
+// Horizontal/Vertical shadow offset, Blur radius, Transparency
+.box-shadow (@x: 0px, @y: 3px, @blur: 5px, @alpha: 0.5) {
+  -webkit-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+  -moz-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+  box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+}
+
+// Fade-in transition
+.transition (@prop: all, @time: 1s, @ease: linear) {
+  -webkit-transition: @prop @time @ease;
+  -moz-transition: @prop @time @ease;
+  -o-transition: @prop @time @ease;
+  -ms-transition: @prop @time @ease;
+  transition: @prop @time @ease;
+}
+
+// Transform (Rotate, Scale, Skew, Translate)
+.transform (@rotate: 90deg, @scale: 1, @skew: 1deg, @translate: 10px) {
+  -webkit-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+  -moz-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+  -o-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+  -ms-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+  transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+}
+
+// Linear Gradient (2 Colors)
+// https://developer.mozilla.org/en/CSS/-moz-linear-gradient
+.gradient (@origin: left, @start: #ffffff, @stop: #000000) {
+  background-color: @start;
+  background-image: -webkit-linear-gradient(@origin, @start, @stop);
+  background-image: -moz-linear-gradient(@origin, @start, @stop);
+  background-image: -o-linear-gradient(@origin, @start, @stop);
+  background-image: -ms-linear-gradient(@origin, @start, @stop);
+  background-image: linear-gradient(@origin, @start, @stop);
+}
+
+// Quick Gradient (Any Color to Black)
+.quick-gradient (@origin: left, @start: #ffffff, @alpha: 0.2) {
+  background-color: @start;
+  background-image: -webkit-linear-gradient(@origin, @start, rgba(0,0,0,@alpha));
+  background-image: -moz-linear-gradient(@origin, @start, rgba(0,0,0,@alpha));
+  background-image: -o-linear-gradient(@origin, @start, rgba(0,0,0,@alpha));
+  background-image: -ms-linear-gradient(@origin, @start, rgba(0,0,0,@alpha));
+  background-image: linear-gradient(@origin, @start, rgba(0,0,0,@alpha));
+}
+
+// Margins
+.margin-horizontal (@size) {
+  margin-left: @size;
+  margin-right: @size;
+}
+
+.margin-vertical (@size) {
+  margin-top: @size;
+  margin-bottom: @size;
+}
+
+// Paddings
+.padding-horizontal (@size) {
+  padding-left: @size;
+  padding-right: @size;
+}
+
+.padding-vertical (@size) {
+  padding-top: @size;
+  padding-bottom: @size;
+}
+
+// Animation
+.animation (@name, @duration: 300ms, @delay: 0, @ease: ease) {
+  -webkit-animation: @name @duration @delay @ease;
+  -moz-animation: @name @duration @delay @ease;
+  -ms-animation: @name @duration @delay @ease;
+}
+
+// Opacity
+.opacity (@opacity: 0.5) {
+	-webkit-opacity: @opacity;
+	-moz-opacity: @opacity;
+	opacity: @opacity;
+}
+
+// Color Text and Background
+.text-and-bg-colors (@text: #000000, @bg: #ffffff) {
+  color: @text;
+  background-color: @bg;
+}
+
+// Use system fonts
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
