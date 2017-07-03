@@ -1,0 +1,18 @@
+{
+  "appName": {
+    "message": "Palette Ballot",
+    "description": "The name of the application"
+  },
+  "appShortName": {
+    "message": "Palette Bal",
+    "description": "The short_name (maximum of 12 characters recommended) is a short version of the app's name."
+  },
+  "appDescription": {
+    "message": "An extension to quickly store and access colo(u)r palettes.",
+    "description": "The description of the application"
+  },
+  "browserActionTitle": {
+    "message": "Palette Ballot",
+    "description": "The title of the browser action button"
+  }
+}

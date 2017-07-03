@@ -1,0 +1,14 @@
+{
+  "env": {
+    "browser": true
+  },
+  "globals": {
+    "chrome": true,
+    "crypto": true
+  },
+  "parser": "babel-eslint",
+  "extends": "standard",
+  "rules": {
+    "strict": 0
+  }
+}
