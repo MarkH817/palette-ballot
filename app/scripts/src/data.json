@@ -1,0 +1,119 @@
+{
+  "settings": {
+    "palette": {
+      "label": "Palette",
+      "options": [
+        {
+          "label": "Minimizd Palette Thickness",
+          "type": "dropdown",
+          "values": [
+            "slim",
+            "medium",
+            "large"
+          ],
+          "default": "slim"
+        }
+      ]
+    },
+    "clipboard": {
+      "label": "Clipboard",
+      "options": [
+        {
+          "label": "Write hex value to clipboard",
+          "type": "checkbox",
+          "default": true
+        }
+      ]
+    },
+    "notifications": {
+      "label": "Notifications",
+      "options": [
+        {
+          "label": "Enable Push Notifications",
+          "type": "checkbox",
+          "default": true
+        }
+      ]
+    }
+  },
+  "palettes": [
+    {
+      "id": 1,
+      "title": "Autumn Werewolf",
+      "colors": [
+        {
+          "id": 1,
+          "code": "D3061E"
+        },
+        {
+          "id": 2,
+          "code": "E1EAF2"
+        },
+        {
+          "id": 3,
+          "code": "992D18"
+        },
+        {
+          "id": 4,
+          "code": "F46E00"
+        },
+        {
+          "id": 5,
+          "code": "3F033D"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Lovely Thing",
+      "colors": [
+        {
+          "id": 1,
+          "code": "080F2B"
+        },
+        {
+          "id": 2,
+          "code": "132F3A"
+        },
+        {
+          "id": 3,
+          "code": "6ED79F"
+        },
+        {
+          "id": 4,
+          "code": "E3D7C1"
+        },
+        {
+          "id": 5,
+          "code": "DA3C6C"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Headache",
+      "colors": [
+        {
+          "id": 1,
+          "code": "655643"
+        },
+        {
+          "id": 2,
+          "code": "80BCA3"
+        },
+        {
+          "id": 3,
+          "code": "F6F7BD"
+        },
+        {
+          "id": 4,
+          "code": "E6AC27"
+        },
+        {
+          "id": 5,
+          "code": "BF4D28"
+        }
+      ]
+    }
+  ]
+}
