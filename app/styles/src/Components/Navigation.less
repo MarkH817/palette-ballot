@@ -1,0 +1,19 @@
+@import "../../resources/index.less";
+
+nav {
+}
+
+nav a {
+  text-align: center;
+  text-decoration: none;
+  .text-and-bg-colors(#ffffff, @five);
+  border: .125em solid @five;
+  .border-radius-custom(1em, 1em, 0, 0);
+  width: 5em;
+  padding: .5em;
+  display: inline-block;
+}
+
+nav a.current {
+  .text-and-bg-colors(@five, #ffffff);
+}

@@ -1,0 +1,22 @@
+@import "starter.less";
+
+@one: #D3061E;
+@two: #E1EAF2;
+@three: #992D18;
+@four: #F46E00;
+@five: #3F033D;
+
+.section-border (@color: @five) {
+  .border-vertical(.125em, solid, @color);
+}
+
+:root {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'system';
+  background-color: @two;
+  margin: 0;
+  padding: 0;
+}

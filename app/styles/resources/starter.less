@@ -1,3 +1,8 @@
+// Default box sizing
+* {
+  box-sizing: border-box;
+}
+
 // Rounded corners (All)
 .border-radius (@radius: 5px) {
   -webkit-border-radius: @radius;
@@ -79,6 +84,23 @@
 .padding-vertical (@size) {
   padding-top: @size;
   padding-bottom: @size;
+}
+
+// Borders
+.border-horizontal (@size, @style, @color) {
+  border-left: @size @style @color;
+  border-right: @size @style @color;
+}
+
+.border-vertical (@size, @style, @color) {
+  border-top: @size @style @color;
+  border-bottom: @size @style @color;
+}
+
+// Make block responsive
+.responsive-block (@max-width) {
+  width: 100%;
+  max-width: @max-width;
 }
 
 // Animation
