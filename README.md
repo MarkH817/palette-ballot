@@ -2,6 +2,12 @@
 
 An extension to quickly store and access colo(u)r palettes.
 
+Note: Currently, this project is a work-in-progress. It is not yet ready for initial release.
+
+## Contributing
+
+Do you want to contribute with feature requests, bug fixes, or documenting? Check out our [contributing guide](docs/CONTRIBUTING.md)!
+
 ## Installation
 
 	$ npm install
@@ -66,10 +72,3 @@ The build tool also defines a variable named `ENV` in your scripts. It will be s
 	if(ENV === 'development'){
 		console.log('We are in development mode!');
 	}
-
-
-
-
-
-
-
