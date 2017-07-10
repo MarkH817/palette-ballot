@@ -5,7 +5,7 @@ export default class NewPalette extends Component {
   render () {
     return (
       <Page section='new-palette' title='New Palette'>
-        <p>Hey!</p>
+        <section className='create-palette' />
       </Page>
     )
   }

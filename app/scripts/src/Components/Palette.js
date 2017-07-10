@@ -9,7 +9,6 @@ export default class Palette extends Component {
     }
     this.toggleActive = this.toggleActive.bind(this)
   }
-  // 4027276806
 
   toggleActive () {
     this.setState(prevState => ({active: !prevState.active}))
@@ -21,17 +20,17 @@ export default class Palette extends Component {
     })
 
     return (
-      <div className='palette'>
+      <section className='palette'>
         <button className='title' onClick={this.toggleActive}>
           <h2>
             {this.state.active ? '>' : ''} {this.props.title}
           </h2>
         </button>
 
-        <div className='color-range'>
+        <section className='color-range'>
           {colors}
-        </div>
-      </div>
+        </section>
+      </section>
     )
   }
 }
