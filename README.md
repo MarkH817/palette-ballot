@@ -1,5 +1,8 @@
 # Palette Ballot
 
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](docs/CONTRIBUTING.md)
+
 An extension to quickly store and access colo(u)r palettes.
 
 Note: Currently, this project is a work-in-progress. It is not yet ready for initial release.
