@@ -32,6 +32,7 @@
     "clipboardRead",
     "clipboardWrite",
     "contextMenus",
-    "input"
+    "input",
+    "storage"
   ]
 }
