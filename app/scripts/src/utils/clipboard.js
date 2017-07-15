@@ -3,11 +3,13 @@ export function read (inputElement) {
   // And restore it after this has executed
   let lastActive = document.activeElement
 
-  let result = ''
+  let result = null
+  inputElement.value = ''
   inputElement.focus()
 
   if (document.execCommand('paste')) {
-    result = inputElement.textContent
+    result = inputElement.value
+    inputElement.value = ''
   }
 
   lastActive.focus()
@@ -20,10 +22,12 @@ export function write (inputElement, data) {
   let lastActive = document.activeElement
 
   let flag = false
+  inputElement.value = data
   inputElement.focus()
 
-  if (document.execCommand('copy')) {
+  if (document.execCommand('selectAll') && document.execCommand('copy')) {
     flag = true
+    inputElement.value = ''
   }
 
   lastActive.focus()
