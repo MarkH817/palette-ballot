@@ -1,3 +1,4 @@
+import * as Clipboard from './clipboard'
 import * as Storage from './storage'
 
-export {Storage}
+export {Clipboard, Storage}
