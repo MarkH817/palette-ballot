@@ -14,7 +14,9 @@ export default class Home extends Component {
   }
 
   loadPalettes () {
-    Storage.getPalettes((savedPalettes) => {
+    Storage.getPalettes((savedPalettes, err) => {
+      if (err) console.error(err)
+
       this.setState({
         palettes: savedPalettes
       })
@@ -28,12 +30,10 @@ export default class Home extends Component {
   }
 
   render () {
-    let palettes = this.mapPalettes()
-
     return (
       <Page section='home' title='Home'>
         <section className='palette-list'>
-          {palettes}
+          {this.mapPalettes()}
         </section>
       </Page>
     )

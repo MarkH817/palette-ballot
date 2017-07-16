@@ -1,4 +1,4 @@
-export function read (inputElement) {
+export function read (inputElement, cb) {
   // Grab the last focused element
   // And restore it after this has executed
   let lastActive = document.activeElement
@@ -13,10 +13,15 @@ export function read (inputElement) {
   }
 
   lastActive.focus()
-  return result
+
+  if (result !== null) {
+    cb(result, null)
+  } else {
+    cb(result, new Error('Could not read clipboard'))
+  }
 }
 
-export function write (inputElement, data) {
+export function write (inputElement, data, cb) {
   // Grab the last focused element
   // And restore it after this has executed
   let lastActive = document.activeElement
@@ -31,5 +36,10 @@ export function write (inputElement, data) {
   }
 
   lastActive.focus()
-  return flag
+
+  if (flag) {
+    cb(null)
+  } else {
+    cb(new Error('Could not write to clipboard'))
+  }
 }
