@@ -33,6 +33,7 @@
     "clipboardWrite",
     "contextMenus",
     "input",
+    "notifications",
     "storage"
   ]
 }
