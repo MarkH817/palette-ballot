@@ -8,11 +8,12 @@ export default class Color extends Component {
   }
 
   select () {
-    console.log(`Color Selected: #${this.props.code}`)
+    if (this.props.clipboard) {
+      this.props.clipboard(this.props.code)
+    }
   }
 
   focus () {
-    console.log(`Color Focused: #${this.props.code}`)
   }
 
   render () {

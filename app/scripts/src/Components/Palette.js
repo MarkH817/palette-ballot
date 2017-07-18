@@ -14,11 +14,13 @@ export default class Palette extends Component {
     this.setState(prevState => ({active: !prevState.active}))
   }
 
-  render () {
-    let colors = this.props.colors.map(color => {
-      return <Color key={color.id} code={color.code} min={!this.state.active} />
-    })
+  list () {
+    return this.props.colors.map(color => (
+      <Color key={color.id} code={color.code} min={!this.state.active} clipboard={this.props.clipboard} />
+    ))
+  }
 
+  render () {
     return (
       <section className='palette'>
         <button className='title' onClick={this.toggleActive}>
@@ -28,7 +30,7 @@ export default class Palette extends Component {
         </button>
 
         <section className='color-range'>
-          {colors}
+          {this.list()}
         </section>
       </section>
     )
