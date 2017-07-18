@@ -51,10 +51,8 @@ export function getPalettes (cb) {
 export function addPalette (palette, cb) {
   if (chrome.storage.sync) {
     getPalettes((oldList) => {
-      let updatedList = oldList.push(palette)
-
       chrome.storage.sync.set({
-        palettes: updatedList
+        palettes: [...oldList, palette]
       }, () => {
         cb(null)
       })
