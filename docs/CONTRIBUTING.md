@@ -8,8 +8,9 @@ Note: Currently, this project is a work-in-progress.
 
 Ensure that the Gulp command is installed globally: `npm i -g gulp-cli`
 
-Make sure that you have the [ESLint](http://eslint.org/) and [Editorconfig](http://editorconfig.org/) plugins installed for your respective text editors!
-The coding style conforms to the [JavaScript Standard Style](https://standardjs.com/).
+[![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
+
+Make sure that you have the [StandardJS](https://standardjs.com/#are-there-text-editor-plugins) and [Editorconfig](http://editorconfig.org/) plugins installed for your respective text editors!
 
 ## Pull Requests
 
