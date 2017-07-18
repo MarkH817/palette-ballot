@@ -1,6 +1,7 @@
-export function read (inputElement, cb) {
+export function read (inputElementId, cb) {
   // Grab the last focused element
   // And restore it after this has executed
+  let inputElement = document.getElementById(inputElementId)
   let lastActive = document.activeElement
 
   let result = null
@@ -21,9 +22,10 @@ export function read (inputElement, cb) {
   }
 }
 
-export function write (inputElement, data, cb) {
+export function write (inputElementId, data, cb) {
   // Grab the last focused element
   // And restore it after this has executed
+  let inputElement = document.getElementById(inputElementId)
   let lastActive = document.activeElement
 
   let flag = false
