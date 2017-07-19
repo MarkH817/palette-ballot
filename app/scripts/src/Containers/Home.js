@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import Page from './Page'
 import PaletteList from '../Components/PaletteList'
-import {Storage} from '../utils'
+import {storage} from '../utils'
 
 export default class Home extends Component {
   constructor (props) {
@@ -14,7 +14,7 @@ export default class Home extends Component {
   }
 
   loadPalettes () {
-    Storage.getPalettes((savedPalettes, err) => {
+    storage.getPalettes((savedPalettes, err) => {
       if (err) console.error(err)
 
       this.setState({

@@ -1,5 +1,5 @@
-import * as Clipboard from './clipboard'
-import * as Notifications from './notifications'
-import * as Storage from './storage'
+import * as clipboard from './clipboard'
+import * as notifications from './notifications'
+import * as storage from './storage'
 
-export {Clipboard, Notifications, Storage}
+export {clipboard, notifications, storage}

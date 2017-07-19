@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import Palette from './Palette'
-import {Clipboard} from '../utils'
+import {clipboard} from '../utils'
 
 export default class PaletteList extends Component {
   constructor (props) {
@@ -9,7 +9,7 @@ export default class PaletteList extends Component {
   }
 
   hexToClipboard (colorCode) {
-    Clipboard.write('clipboard', colorCode, (err) => {
+    clipboard.write('clipboard', colorCode, (err) => {
       if (err) {
         console.error(err)
       } else {
