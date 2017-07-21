@@ -2,6 +2,8 @@ export function read (inputElementId, cb) {
   // Grab the last focused element
   // And restore it after this has executed
   let inputElement = document.getElementById(inputElementId)
+  inputElement.style.display = 'block'
+
   let lastActive = document.activeElement
 
   let result = null
@@ -20,12 +22,16 @@ export function read (inputElementId, cb) {
   } else {
     cb(result, new Error('Could not read clipboard'))
   }
+
+  inputElement.style.display = 'none'
 }
 
 export function write (inputElementId, data, cb) {
   // Grab the last focused element
   // And restore it after this has executed
   let inputElement = document.getElementById(inputElementId)
+  inputElement.style.display = 'block'
+
   let lastActive = document.activeElement
 
   let flag = false
@@ -44,4 +50,6 @@ export function write (inputElementId, data, cb) {
   } else {
     cb(new Error('Could not write to clipboard'))
   }
+
+  inputElement.style.display = 'none'
 }

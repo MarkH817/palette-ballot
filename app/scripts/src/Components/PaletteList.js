@@ -27,7 +27,7 @@ export default class PaletteList extends Component {
   render () {
     return (
       <section className='palette-list'>
-        <input type='text' style={{display: 'block'}} id='clipboard' />
+        <input type='text' style={{display: 'none'}} id='clipboard' />
         {this.list()}
       </section>
     )
