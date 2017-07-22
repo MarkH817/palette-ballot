@@ -5,21 +5,25 @@
   border: none;
   padding: .8em;
   width: 5em;
-}
 
-.swatch.min {
-  width: 4em;
-  padding-top: .66em;
-  padding-bottom: .66em;
-}
+  &:focus {
+    outline-width: thick;
+  }
 
-.swatch:focus {
-  outline-width: thick;
-}
+  .text {
+    font-size: .75em;
+    font-family: monospace;
+    .text-and-bg-colors(#444, rgba(255, 255, 255, .6));
+    padding: .25em;
+  }
 
-.swatch .text {
-  font-size: .75em;
-  font-family: monospace;
-  .text-and-bg-colors(#444, rgba(255, 255, 255, .6));
-  padding: .25em;
+  &.min {
+    width: 4em;
+    padding-top: .66em;
+    padding-bottom: .66em;
+
+    .text {
+      display: none;
+    }
+  }
 }

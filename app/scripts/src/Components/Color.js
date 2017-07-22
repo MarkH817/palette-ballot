@@ -25,13 +25,9 @@ export default class Color extends Component {
 
     return (
       <button style={bgStyle} className={classes} onFocus={this.focus} onClick={this.select}>
-        {this.props.min ? (
-          null
-        ) : (
-          <section className='text'>
-            #{this.props.code}
-          </section>
-        )}
+        <section className='text'>
+          #{this.props.code}
+        </section>
       </button>
     )
   }
