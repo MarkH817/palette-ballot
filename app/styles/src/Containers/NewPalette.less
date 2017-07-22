@@ -2,4 +2,25 @@
 
 .create-palette {
   .section-border();
+  height: 12em;
+  overflow-y: scroll;
+
+  span {
+    display: block;
+
+    input {
+      .text-and-bg-colors(@five, transparent);
+      border: none;
+      border-bottom: .125em solid @five;
+      font-family: monospace;
+      font-size: 1.25em;
+      max-width: 4em;
+      display: inline-block;
+      .transition(display);
+
+      &:focus {
+        outline-width: thick;
+      }
+    }
+  }
 }
