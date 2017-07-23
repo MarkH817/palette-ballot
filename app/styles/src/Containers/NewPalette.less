@@ -5,8 +5,9 @@
   height: 12em;
   overflow-y: scroll;
 
-  span {
-    display: block;
+  .new-color {
+    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
 
     input {
       .text-and-bg-colors(@five, transparent);
@@ -16,7 +17,6 @@
       font-size: 1.25em;
       max-width: 4em;
       display: inline-block;
-      .transition(display);
 
       &:focus {
         outline-width: thick;
