@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import {storage} from '../utils'
 
 export default class PaletteCreate extends Component {
   constructor (props) {
@@ -14,8 +15,41 @@ export default class PaletteCreate extends Component {
       color4: 'ffffff'
     }
 
+    this.handleSubmit = this.handleSubmit.bind(this)
     this.handleChange = this.handleChange.bind(this)
     this.makeInputs = this.makeInputs.bind(this)
+  }
+
+  handleSubmit (event) {
+    let id = Date.now()
+    let title = this.state.title || Date.now()
+    let colors = []
+    for (let i = 0; i < this.state.size; i++) {
+      let code = this.state[`color${i}`]
+
+      if (code && code.length === 6) {
+        colors.push({
+          id: i,
+          code: code
+        })
+      }
+    }
+
+    let palette = {
+      id,
+      title,
+      colors
+    }
+
+    storage.addPalette(palette, (err) => {
+      if (err) {
+        console.error(err)
+      } else {
+        console.log('Success!')
+      }
+    })
+
+    event.preventDefault()
   }
 
   handleChange (event) {
@@ -49,8 +83,12 @@ export default class PaletteCreate extends Component {
 
   render () {
     return (
-      <form>
+      <form onSubmit={this.handleSubmit}>
+        <input id='title' type='text' name='title' placeholder='New Palette Title' value={this.state.title} onChange={this.handleChange} />
+
         {this.makeInputs()}
+
+        <input id='save' type='submit' value='Save' />
       </form>
     )
   }
