@@ -1,22 +1,46 @@
 @import "../../resources/index.less";
 
+.input-style () {
+  .text-and-bg-colors(@five, transparent);
+  border: none;
+  border-bottom: .125em solid @five;
+}
+
 .create-palette {
   .section-border();
-  height: 12em;
+  height: 14em;
   overflow-y: scroll;
 
+
+  #title {
+    .input-style();
+    border-width: .0625em;
+    font-size: 1.5em;
+    margin-bottom: .25em;
+  }
+
+  #save {
+    .reset();
+    .text-and-bg-colors(@five ,transparent);
+    border: .125em solid @five;
+    .border-radius(.5em);
+    padding: .25em .5em;
+    margin-top: 1em;
+  }
+
   .new-color {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     display: grid;
 
+    span, input {
+      display: inline-block;
+    }
+
     input {
-      .text-and-bg-colors(@five, transparent);
-      border: none;
-      border-bottom: .125em solid @five;
+      .input-style();
       font-family: monospace;
       font-size: 1.25em;
       max-width: 4em;
-      display: inline-block;
 
       &:focus {
         outline-width: thick;
