@@ -8,11 +8,11 @@ export default class PaletteCreate extends Component {
     this.state = {
       title: '',
       size: 5,
-      color0: 'ffffff',
-      color1: 'ffffff',
-      color2: 'ffffff',
-      color3: 'ffffff',
-      color4: 'ffffff'
+      color0: '',
+      color1: '',
+      color2: '',
+      color3: '',
+      color4: ''
     }
 
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -33,6 +33,10 @@ export default class PaletteCreate extends Component {
           code: code
         })
       }
+    }
+
+    if (colors.length === 0) {
+      return
     }
 
     let palette = {
