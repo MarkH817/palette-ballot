@@ -1,26 +1,33 @@
 import React, {Component} from 'react'
 
 export default class Option extends Component {
+  /*
+  props:
+  - type (string)
+  - text (string)
+  - name (string)
+  - initValue (string, boolean)
+  - values (Array<string>)
+  - handleChange (function)
+  */
+
+  constructor (props) {
+    super(props)
+    this.state = {
+      value: props.initValue
+    }
+  }
+
   render () {
     let Input
-
-    /*
-    props:
-    - type (string)
-    - label (string)
-    - name (string)
-    - value (string, boolean)
-    - values (string)
-    - handleChange (function)
-    */
 
     switch (this.props.type) {
       case 'dropdown':
         Input = (
           <label>
-            {this.props.label}
+            {this.props.text}
 
-            <select name={this.props.name} value={this.props.value}>
+            <select name={this.props.name} value={this.state.value}>
               {this.props.values.map((val, index) => (
                 <option key={index} value={val}>{val}</option>
               ))}
@@ -31,8 +38,9 @@ export default class Option extends Component {
       case 'checkbox':
         Input = (
           <label>
-            <input name={this.props.name} checked={this.props.value} type='checkbox' />
-            {this.props.label}
+            <input name={this.props.name} checked={this.state.value} type='checkbox' />
+
+            {this.props.text}
           </label>
         )
         break
