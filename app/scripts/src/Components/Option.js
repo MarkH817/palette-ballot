@@ -16,6 +16,16 @@ export default class Option extends Component {
     this.state = {
       value: props.initValue
     }
+    this.handleChange = this.handleChange.bind(this)
+  }
+
+  handleChange (event) {
+    let target = event.target
+    let value = target.type === 'checkbox' ? target.checked : target.value
+
+    this.setState({
+      value: value
+    })
   }
 
   render () {
@@ -27,7 +37,7 @@ export default class Option extends Component {
           <label>
             {this.props.text}
 
-            <select name={this.props.name} value={this.state.value}>
+            <select name={this.props.name} value={this.state.value} onChange={this.handleChange}>
               {this.props.values.map((val, index) => (
                 <option key={index} value={val}>{val}</option>
               ))}
@@ -38,7 +48,7 @@ export default class Option extends Component {
       case 'checkbox':
         Input = (
           <label>
-            <input name={this.props.name} checked={this.state.value} type='checkbox' />
+            <input name={this.props.name} checked={this.state.value} type='checkbox' onChange={this.handleChange} />
 
             {this.props.text}
           </label>
